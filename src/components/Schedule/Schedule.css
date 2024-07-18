@@ -1,0 +1,180 @@
+section#schedule {
+  position: relative;
+  z-index: 2;
+  background-color: #027fbb;
+  position: relative;
+  z-index: 1;
+}
+section#schedule h1 {
+  text-align: center;
+}
+section#schedule .container:before {
+  content: "SCHEDULE";
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  color: #027fbb;
+  font-family: "Anton", sans-serif;
+  font-size: 13rem;
+  line-height: 1;
+  opacity: 0.2;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+@media only screen and (max-width: 1240px) {
+  section#schedule .container:before {
+    font-size: 11rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#schedule .container:before {
+    font-size: 7rem;
+    top: -27px;
+  }
+}
+@media only screen and (max-width: 467px) {
+  section#schedule .container:before {
+    font-size: 4rem;
+    top: -14px;
+  }
+}
+@supports (text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff) {
+  section#schedule .container:before {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+}
+section#schedule .singeFish {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+  max-width: 550px;
+}
+section#schedule .singeFish img {
+  width: 100%;
+}
+section#schedule .singeFish.tlFish {
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+@media only screen and (max-width: 567px) {
+  section#schedule .singeFish.tlFish {
+    top: 0;
+    left: -20px;
+    width: 70%;
+  }
+}
+section#schedule .singeFish.brFish {
+  bottom: -100px;
+  right: 0;
+  width: 70%;
+}
+section#schedule .singeFish.brFish img {
+  transform: rotate(-5deg);
+}
+@media only screen and (max-width: 567px) {
+  section#schedule .singeFish.brFish {
+    bottom: 0;
+    right: -50px;
+  }
+}
+section#schedule .typicalSchedule {
+  display: flex;
+}
+@media only screen and (max-width: 991px) {
+  section#schedule .typicalSchedule {
+    flex-wrap: wrap;
+  }
+}
+section#schedule .typicalSchedule .weekOne {
+  flex: 1 1 57%;
+}
+section#schedule .typicalSchedule .weekOne .weekDays {
+  width: 25%;
+}
+section#schedule .typicalSchedule .weekTwo {
+  flex: 1 1 auto;
+}
+section#schedule .typicalSchedule .weekTwo .weekDays {
+  width: 50%;
+}
+section#schedule .typicalSchedule .weekOne, section#schedule .typicalSchedule .weekTwo {
+  display: inline-block;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: top;
+}
+@media only screen and (max-width: 991px) {
+  section#schedule .typicalSchedule .weekOne, section#schedule .typicalSchedule .weekTwo {
+    width: 100%;
+  }
+}
+section#schedule .typicalSchedule .weekOne .weekHead, section#schedule .typicalSchedule .weekTwo .weekHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  vertical-align: top;
+}
+section#schedule .typicalSchedule .weekOne .weekHead h3, section#schedule .typicalSchedule .weekTwo .weekHead h3 {
+  text-align: left;
+  color: #ffffff;
+  display: inline-block;
+  width: 140px;
+  flex-basis: auto;
+}
+@media only screen and (max-width: 767px) {
+  section#schedule .typicalSchedule .weekOne .weekHead h3, section#schedule .typicalSchedule .weekTwo .weekHead h3 {
+    width: 100px;
+  }
+}
+section#schedule .typicalSchedule .weekOne .weekHead .hLine, section#schedule .typicalSchedule .weekTwo .weekHead .hLine {
+  display: inline-block;
+  height: 3px;
+  background-color: #FF9400;
+  flex-grow: 2;
+}
+section#schedule .typicalSchedule .weekOne .weekDays, section#schedule .typicalSchedule .weekTwo .weekDays {
+  display: inline-block;
+  vertical-align: top;
+}
+section#schedule .typicalSchedule .weekOne .weekDays h4, section#schedule .typicalSchedule .weekTwo .weekDays h4 {
+  color: #FF9400;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+section#schedule .typicalSchedule .weekOne .weekDays p, section#schedule .typicalSchedule .weekTwo .weekDays p {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 991px) {
+  section#schedule .typicalSchedule .weekOne .weekDays, section#schedule .typicalSchedule .weekTwo .weekDays {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 567px) {
+  section#schedule .typicalSchedule .weekOne .weekDays, section#schedule .typicalSchedule .weekTwo .weekDays {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  section#schedule .typicalSchedule .weekOne, section#schedule .typicalSchedule .weekTwo {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#schedule {
+    padding-bottom: 40px;
+  }
+}
+section#schedule .bottomText {
+  margin-top: 48px;
+}
+
+/*# sourceMappingURL=Schedule.css.map */

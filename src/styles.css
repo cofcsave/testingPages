@@ -1,0 +1,673 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #027fbb;
+  background: linear-gradient(90deg, #027fbb 0%, #003F67 100%);
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 300;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #000;
+  background: #FF9400;
+}
+
+::selection {
+  color: #000;
+  background: #FF9400;
+}
+
+h1 {
+  font-size: 5.5rem;
+  line-height: 5.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 767px) {
+  h1 {
+    margin: 0;
+  }
+}
+h1 span {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 100;
+  margin: 0;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  h1 span {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h1 span {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media only screen and (max-width: 467px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 5.5rem;
+  line-height: 5.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media only screen and (max-width: 467px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  color: #FF9400;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  margin: 0;
+  vertical-align: top;
+}
+@media only screen and (max-width: 767px) {
+  h4 {
+    font-size: 1.4rem;
+    line-height: normal;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+h4.preHeader {
+  text-transform: uppercase;
+  margin-bottom: -15px;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  h6 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  h6 {
+    font-size: 0.9rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6rem;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+}
+
+section:not(.notopPad):not(.aboveWater):not(.waterLine) {
+  padding-top: 120px;
+}
+@media only screen and (max-width: 767px) {
+  section:not(.notopPad):not(.aboveWater):not(.waterLine) {
+    padding-top: 75px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  section:not(.notopPad):not(.aboveWater):not(.waterLine) {
+    padding-top: 45px;
+  }
+}
+
+section:not(.aboveWater) {
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 767px) {
+  section:not(.aboveWater) {
+    padding-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  section:not(.aboveWater) {
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  section.waterLine.lm-water {
+    padding-bottom: 100px;
+  }
+}
+
+section#instructions, section#schedule, section#travel {
+  background: linear-gradient(180deg, #027fbb 10%, #036695 100%);
+}
+section#instructions .container, section#schedule .container, section#travel .container {
+  z-index: 6;
+}
+
+section#rentals, section#classes {
+  background-color: #084c77;
+}
+
+.container {
+  max-width: 85rem;
+  margin: auto;
+  position: relative;
+  height: 100%;
+  padding: 0 100px;
+}
+@media only screen and (max-width: 1240px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+@media only screen and (max-width: 467px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+.web-contain {
+  max-width: 4000px;
+  margin: auto;
+  overflow: hidden;
+}
+.web-contain:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: url(/hero-long.jpg) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 3500px;
+}
+@media only screen and (max-width: 567px) {
+  .web-contain:before {
+    background-size: 1800px;
+    min-height: 389px;
+    top: 34px;
+  }
+}
+@media only screen and (min-width: 2200px) {
+  .web-contain {
+    border-left: 2px solid red;
+  }
+}
+
+section.aboveWater {
+  /* Set a specific height */
+  min-height: 642px;
+  /* Create the parallax scrolling effect */
+}
+@media only screen and (max-width: 567px) {
+  section.aboveWater {
+    background-size: 1800px;
+    min-height: 389px;
+    background-position: center 30px;
+  }
+}
+
+section.waterLine {
+  position: relative;
+  z-index: 4;
+}
+section.waterLine img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -725px;
+  width: 4000px;
+}
+@media only screen and (max-width: 567px) {
+  section.waterLine img {
+    top: -699px;
+  }
+}
+
+.headlineDescription {
+  margin-bottom: 48px;
+}
+
+.btnOrange {
+  background-color: #FF9400;
+  color: #003F67;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 24px;
+}
+.btnOrange .arrow {
+  border: solid #003F67;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-bottom: 1px;
+  margin-left: 4px;
+  transition: all 0.5s;
+}
+.btnOrange:hover {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+  color: #003F67;
+}
+.btnOrange:hover .arrow {
+  transform: rotate(-45deg) translate(2px, 2px);
+  transition: all 0.5s;
+}
+
+.head-line {
+  width: 200px;
+  height: 6px;
+  background-color: #FF9400;
+  margin-bottom: 3rem;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.head-line.centerHL {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: 676px) {
+  .head-line {
+    margin-bottom: 15px;
+  }
+}
+
+.subHeader {
+  margin-top: -20px;
+}
+@media only screen and (max-width: 689px) {
+  .subHeader {
+    margin-top: 0;
+  }
+}
+
+.centerText {
+  text-align: center;
+}
+
+.small-print {
+  font-size: 14px;
+}
+
+#bot-logo {
+  width: 100%;
+  min-width: 120px;
+  max-width: 220px;
+  margin: 20px auto;
+}
+
+.lm-page h1 {
+  font-size: 5rem;
+}
+@media only screen and (max-width: 767px) {
+  .lm-page h1 {
+    font-size: 3.3rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .lm-page h1 {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (max-width: 367px) {
+  .lm-page h1 {
+    font-size: 1.3rem;
+  }
+}
+
+section.lm-water img {
+  top: -483px;
+}
+
+section#lm-top {
+  position: relative;
+  z-index: 5;
+  margin-top: 100px;
+}
+section#lm-top .inst-top h1 {
+  text-align: center;
+}
+section#lm-top ul {
+  list-style: circle;
+  padding-left: 30px;
+}
+section#lm-top .fullHeadline {
+  margin-bottom: 120px;
+}
+@media only screen and (max-width: 867px) {
+  section#lm-top .fullHeadline {
+    margin-bottom: 30px;
+  }
+}
+section#lm-top .halfLT {
+  display: inline-block;
+  width: 46%;
+  box-sizing: border-box;
+  margin-bottom: 45px;
+  vertical-align: top;
+  position: relative;
+}
+@media only screen and (max-width: 950px) {
+  section#lm-top .halfLT {
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 867px) {
+  section#lm-top .halfLT {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+section#lm-top .halfRT {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: right;
+  position: relative;
+  z-index: -1;
+  vertical-align: top;
+}
+section#lm-top .halfRT .threeFish {
+  position: absolute;
+  top: -3rem;
+  left: -7rem;
+  width: 90%;
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .halfRT .threeFish {
+    bottom: -25px;
+    right: 0;
+    width: 100%;
+  }
+}
+section#lm-top .halfRT img {
+  width: 70%;
+}
+section#lm-top .halfRT .imgCrop {
+  width: 82%;
+  vertical-align: bottom;
+  margin-right: 0;
+  margin-left: auto;
+  overflow: hidden;
+  box-shadow: 9px 8px 20px 2px rgba(0, 0, 0, 0.3);
+  max-height: 335px;
+}
+section#lm-top .halfRT .imgCrop img {
+  width: 128%;
+  display: block;
+  margin-left: -27px;
+  margin-top: -45%;
+}
+@media only screen and (max-width: 867px) {
+  section#lm-top .halfRT .imgCrop {
+    width: 100%;
+    margin: auto;
+    max-height: 400px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  section#lm-top .halfRT .imgCrop {
+    max-height: 250px;
+  }
+}
+section#lm-top .halfRT .circles {
+  position: absolute;
+  top: -3.5vw;
+  right: 16%;
+  opacity: 0.4;
+  width: 28vw;
+  height: 28vw;
+  z-index: -2;
+  max-height: 600px;
+  max-width: 600px;
+}
+@media only screen and (max-width: 800px) {
+  section#lm-top .halfRT .circles {
+    right: 23%;
+  }
+}
+section#lm-top .halfRT .circles .lgCircle {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 1000px;
+  position: relative;
+}
+section#lm-top .halfRT .circles .lgCircle .smCircle {
+  height: 85%;
+  width: 85%;
+  border: 2px solid #ffffff;
+  border-radius: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 867px) {
+  section#lm-top .halfRT {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 13vw;
+    margin-bottom: 8vw;
+  }
+  section#lm-top .halfRT .circles {
+    left: auto;
+    top: -5vw;
+    width: 44vw;
+    height: 44vw;
+    right: -6%;
+  }
+}
+section#lm-top .halfLB {
+  display: inline-block;
+  width: 48%;
+  box-sizing: border-box;
+  margin-bottom: 45px;
+  vertical-align: top;
+  position: relative;
+}
+section#lm-top .halfLB .imgCrop {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 9px 8px 20px 2px rgba(0, 0, 0, 0.3);
+}
+section#lm-top .halfLB .imgCrop img {
+  vertical-align: bottom;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170%;
+  max-width: 700px;
+  top: 59%;
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .halfLB .imgCrop img {
+    max-width: 850px;
+  }
+}
+section#lm-top .halfLB .threeFish {
+  position: absolute;
+  top: -3rem;
+  width: 95%;
+  z-index: 1;
+}
+section#lm-top .halfLB .threeFish img {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .halfLB {
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+  }
+}
+section#lm-top .inst-btm {
+  margin-top: 120px;
+  position: relative;
+}
+section#lm-top .inst-btm .halfRB {
+  display: inline-block;
+  width: 57%;
+  box-sizing: border-box;
+  padding-left: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section#lm-top .inst-btm .halfRB.vBtm {
+  vertical-align: bottom;
+}
+section#lm-top .inst-btm .halfRB .threeFish {
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  width: 90%;
+}
+section#lm-top .inst-btm .halfRB img {
+  width: 60%;
+  vertical-align: bottom;
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .inst-btm .halfRB {
+    width: 100%;
+    display: block;
+    padding-left: 0px;
+    position: relative;
+    transform: none;
+    top: auto;
+    text-align: center;
+  }
+  section#lm-top .inst-btm .halfRB .head-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+section#lm-top .facts .singleFacts {
+  width: 33%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px;
+  vertical-align: top;
+}
+section#lm-top .facts .singleFacts p {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .facts .singleFacts p {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  section#lm-top .facts .singleFacts {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#lm-top .facts .singleFacts {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

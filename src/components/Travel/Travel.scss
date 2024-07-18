@@ -1,0 +1,131 @@
+@import './../../variables';
+
+section#travel {
+    position: relative;
+    z-index: 1;
+    .container {
+        &:before {
+            content: "TRAVEL";
+            top: 16px;
+            left:42%;
+            z-index: -1;
+            position: absolute;
+            color: $waterBlue;
+            font-family: 'Anton', sans-serif;
+            font-size: 15rem;
+            line-height: 1;
+            opacity: .2;
+            text-shadow:
+            -1px -1px 0 $lightColor,  
+            1px -1px 0 $lightColor,
+            -1px 1px 0 $lightColor,
+            1px 1px 0 $lightColor;
+            @media only screen and (max-width:1240px) {
+                font-size: 11rem;
+            }
+            @media only screen and (max-width:1040px) {
+                left:50%;
+                transform:translateX(-50%);
+            }
+            @media only screen and (max-width:767px) {
+                font-size: 7rem;
+                top:-27px;
+            }
+            @media only screen and (max-width:467px) {
+                font-size: 4rem;
+                top:-14px;
+            }
+        }
+        @supports((text-stroke: 1px $lightColor) or (-webkit-text-stroke: 1px $lightColor)) {
+            &:before {
+                color: transparent;
+                -webkit-text-stroke: 1px $lightColor;
+                text-stroke: 1px $lightColor;
+                text-shadow: none;
+            }
+        }
+    }
+    .travelImgs, .trips {
+        display: inline-block;
+        vertical-align: top;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .travelImgs {
+        width: 40%;
+        padding-right:5%;
+        img {
+            width:100%;
+            box-shadow: $imgShadow;
+            margin-bottom: 15px;
+            border-radius: $borderRadius;
+            &:nth-child(1), &:nth-child(3) {
+                transform:$rotateLeft;
+            }
+            &:nth-child(2) {
+                transform: $rotateRight;
+            }
+        }
+    }
+    .trips {
+        width: 60%;
+        .mobileShow {
+            border-radius: $borderRadius;
+        }
+        .phoneN {
+            color: $accent;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media only screen and (max-width:1040px) {
+            width: 100%;
+            padding: 0;
+            .mobileShow {
+                display: block;
+                width: 100%;
+                margin: 25px 0;
+                box-shadow: $imgShadow;
+                &.mSmall {
+                    width: 46%;
+                    display: inline-block;
+                    margin: 25px 2% 0;
+                    box-sizing: border-box;
+                    
+                }
+            }
+            h2 {
+                text-align: center;
+            }
+            .head-line {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    .destinations {
+        .details {
+            width: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin-top: 2em;
+            @media only screen and (max-width:540px) {
+                width: 100%;
+                text-align: center;
+            }
+            .soldOut {
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .local {
+                color:$accent;
+                font-weight: 600;
+                &.sOut {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width:767px ) {
+        padding-bottom: 40px;
+    }
+}

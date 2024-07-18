@@ -1,0 +1,23 @@
+$waterBlue:#027fbb;
+$darkestBlue:#003F67;
+$blueGradient:linear-gradient(180deg, #027fbb 10%, #036695 100%);
+$menuBlue:#15405c;
+$accent:#FF9400;
+$superDarkBlue: #002B47;
+$imgShadow:9px 8px 20px 2px rgba(0,0,0,.3);
+$darkSectionBack:radial-gradient(#1F6795, #084c77);
+$darkSection:#084c77;
+$lightColor: #ffffff;
+
+$borderRadius: 24px;
+
+$rotateLeft: rotate(3deg);
+$rotateRight: rotate(-3deg);
+
+
+@mixin imgCrop {
+    overflow: hidden;
+    position: relative;
+    box-shadow: $imgShadow;
+    border-radius: $borderRadius;
+  }

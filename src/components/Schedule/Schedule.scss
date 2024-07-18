@@ -1,0 +1,163 @@
+@import './../../variables';
+
+section#schedule {
+    position: relative;
+    z-index: 2;
+    background-color: $waterBlue;
+    position: relative;
+    z-index:1;
+    h1 {
+        text-align: center;
+    }
+    .container {
+        &:before {
+            content: "SCHEDULE";
+            top: -50px;
+            left:50%;
+            transform:translateX(-50%);
+            z-index: -1;
+            position: absolute;
+            color: $waterBlue;
+            font-family: 'Anton', sans-serif;
+            font-size: 13rem;
+            line-height: 1;
+            opacity: .2;
+            text-shadow:
+            -1px -1px 0 $lightColor,  
+            1px -1px 0 $lightColor,
+            -1px 1px 0 $lightColor,
+            1px 1px 0 $lightColor;
+            @media only screen and (max-width:1240px) {
+                font-size: 11rem;
+            }
+            @media only screen and (max-width:767px) {
+                font-size: 7rem;
+                top:-27px;
+            }
+            @media only screen and (max-width:467px) {
+                font-size: 4rem;
+                top:-14px;
+            }
+        }
+        @supports((text-stroke: 1px $lightColor) or (-webkit-text-stroke: 1px $lightColor)) {
+            &:before {
+                color: transparent;
+                -webkit-text-stroke: 1px $lightColor;
+                text-stroke: 1px $lightColor;
+                text-shadow: none;
+            }
+        }
+    }
+    .singeFish {
+        position: absolute;
+        z-index: -1;
+        opacity: .1;
+        max-width: 550px;
+        img {
+            width: 100%;
+        }
+        &.tlFish {
+            top: 0;
+            left: 0;
+            width: 50%;
+            @media only screen and (max-width:567px) {
+                top: 0;
+                left: -20px;
+                width: 70%;
+            }
+        }
+        &.brFish {
+            bottom: -100px;
+            right: 0;
+            width: 70%;
+            img {
+                transform:rotate(-5deg);
+            }
+            @media only screen and (max-width:567px) {
+                bottom: 0;
+                right: -50px;
+            }
+        }
+
+    }
+    .typicalSchedule {
+        display: flex;
+        @media only screen and (max-width:991px) {
+            flex-wrap: wrap;
+       }
+    .weekOne {
+        flex: 1 1 57%;
+        .weekDays {
+            width: 25%;
+        }
+    }
+    .weekTwo {
+        flex: 1 1 auto;
+        .weekDays {
+            width: 50%;
+        }
+    }
+    .weekOne, .weekTwo {
+        display: inline-block;
+        padding: 20px 20px 0 20px;
+        box-sizing: border-box;
+        position: relative;
+        vertical-align: top;
+        @media only screen and (max-width:991px) {
+            width:100%;
+       }
+        .weekHead {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            vertical-align: top;
+            h3 {
+                text-align: left;
+                color: $lightColor;
+                display: inline-block;
+                width: 140px;
+                flex-basis: auto;
+                @media only screen and (max-width:767px) {
+                     width:100px;
+                }
+            }
+            .hLine {
+                display: inline-block;
+                height: 3px;
+                background-color: $accent;
+                flex-grow: 2;
+            }
+        } 
+        .weekDays {
+            display: inline-block;
+            vertical-align: top;
+            h4 {
+                color:$accent;
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-family: 'Open Sans', sans-serif;
+                text-transform: uppercase;
+            }
+            p {
+                font-weight: 400;
+                margin-bottom: 25px;
+            }
+            @media only screen and (max-width:991px) {
+                 width:25%;
+            }
+            @media only screen and (max-width:567px) {
+                 width:50%;
+            }
+        }
+        @media only screen and (max-width:991px) {
+            width:100%;
+        }
+    }
+}
+    @media only screen and (max-width:767px) {
+        padding-bottom: 40px;
+    }
+    .bottomText {
+        margin-top: 48px;
+    }
+}

@@ -1,0 +1,264 @@
+@import './../../variables';
+
+section#rentals {
+    position: relative;
+    z-index: 1;
+    background-color: $darkSection;
+    h2 {
+        text-align: center;
+    }
+    .container {
+        z-index: 2;
+        &:before {
+            content: "RENTALS";
+            top: -50px;
+            left:50%;
+            transform:translateX(-50%);
+            z-index: -1;
+            position: absolute;
+            color: $darkSection;
+            font-family: 'Anton', sans-serif;
+            font-size: 15rem;
+            line-height: 1;
+            opacity: .2;
+            text-shadow:
+            -1px -1px 0 $lightColor,  
+            1px -1px 0 $lightColor,
+            -1px 1px 0 $lightColor,
+            1px 1px 0 $lightColor;
+            @media only screen and (max-width:1240px) {
+                font-size: 11rem;
+            }
+            @media only screen and (max-width:767px) {
+                font-size: 7rem;
+                top:-27px;
+            }
+            @media only screen and (max-width:467px) {
+                font-size: 4rem;
+                top:-14px;
+            }
+        }
+        @supports((text-stroke: 1px $lightColor) or (-webkit-text-stroke: 1px $lightColor)) {
+            &:before {
+                color: transparent;
+                -webkit-text-stroke: 1px $lightColor;
+                text-stroke: 1px $lightColor;
+                text-shadow: none;
+                }
+            }
+        }
+        .sectionInfo {
+            width: 100%;
+            .leftInfo {
+                width: 48%;
+                display: inline-block;
+                h4 {
+                    margin-bottom: 20px;
+                }
+                @media only screen and (max-width:900px) {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .multiDivid {
+                width: 10%;
+                display: inline-block;
+                height: 150px;
+                vertical-align: top;
+                margin-top: 30px;
+                text-align: center;
+                .topR, .bottomL {
+                    width:20%;
+                    height: 100%;
+                    display: inline-block;
+                }
+                .centerLine {
+                    width: 1px;
+                    background-color: $lightColor;
+                    height:100%;
+                    display: inline-block;
+                }
+                .topR {
+                    border-bottom:1px solid $lightColor;
+                }
+                .bottomL {
+                    border-top:1px solid $lightColor;
+                    margin-bottom: -1px;
+                }
+                @media only screen and (max-width:900px) {
+                    width: 100%;
+                    display: block;
+                    height: 30px;
+                    margin: 30px auto;
+                    .topR, .bottomL {
+                        width:90%;
+                        height: 15px;
+                        display: block;
+                    }
+                    .centerLine {
+                        width: 90%;
+                        height:1px;
+                        display: block;
+                    }
+                    .topR {
+                        border-right:1px solid $lightColor;
+                        border-bottom: 0;
+                    }
+                    .bottomL {
+                        border-top:0;
+                        border-left:1px solid $lightColor;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .rightInfo {
+                width: 42%;
+                display: inline-block;
+                 @media only screen and (max-width:900px) {
+                     width: 100%;
+                     display: block;
+                }
+            }
+        }
+    .imgInfo {
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        .halfLT {
+            width: 35%;
+            box-sizing: border-box;
+            margin-bottom: 45px;
+            vertical-align: top;
+            position: relative;
+            float: left;
+            h4 {
+                margin-bottom: 20px;
+            }
+            @media only screen and (max-width:950px) {
+                margin-bottom: 5px;
+                margin-top: 0;
+            }
+            @media only screen and (max-width:767px) {
+                width:100%;
+                display: block;
+                float: none;
+                margin-top: 20px;
+            }
+            .contactUs {
+                margin-top: 20px;
+                text-align: left;
+                h4 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .halfRT {
+            display: inline-block;
+            width: 65%;
+            box-sizing: border-box;
+            position: relative;
+            vertical-align: bottom;
+            .shark {
+                position: absolute;
+                opacity:.2;
+                z-index: -1;
+                height: 100%;
+                top: -36%;
+                left: -10%;
+
+                img {
+                    height:175%;
+                    transform: rotate(17deg);
+                }
+            }
+            .smShark {
+                position: absolute;
+                bottom: -28%;
+                right: -5%;
+                height: 80%;
+                opacity: .7;
+                transform: scaleX(-1);
+                img {
+                    height: 100%;
+                    transform: rotate(-39deg);
+                        opacity: .2;
+                }
+                @media only screen and (max-width:767px) {
+                    bottom: -50px;
+                    right: 0;
+                    height: 80%;
+                }
+            }
+            .imgCrop {
+                width: 84%;
+                vertical-align: bottom;
+                margin-right: 0;
+                margin-left: auto;
+                @include imgCrop;;
+                transform: $rotateLeft;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+
+                @media only screen and (max-width:767px) {
+                    width: 100%;
+                    margin: auto;
+                    max-height: 300px;
+                }
+            }
+            .circles {
+                position: absolute;
+                top: -4vw;
+                left:10%;
+                opacity: 0.4;
+                width: 32vw;
+                height: 32vw;
+                z-index: -2;
+                max-height: 600px;
+                max-width: 600px;
+                @media only screen and (max-width:800px) {
+                    right: 23%;
+                }
+                .lgCircle {
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid $lightColor;
+                    border-radius: 1000px;
+                    position: relative;
+                    .smCircle {
+                        height: 85%;
+                        width: 85%;
+                        border: 2px solid $lightColor;
+                        border-radius: 1000px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform:translate(-50%, -50%);
+                    }
+                }
+            }
+            @media only screen and (max-width:767px) {
+                width:100%;
+                display: block;
+                text-align: center;
+                .circles {
+                    left: -10%;
+                    top: -6vw;
+                    width: 53vw;
+                    height: 53vw;
+                }
+            }
+            @media only screen and (max-width:767px) {
+                float: none;
+            }
+        }
+        @media only screen and (max-width:1067px) {
+            margin-top: 5rem;
+        }
+        @media only screen and (max-width:767px) {
+            margin-top: 2rem;
+        }
+    }
+}

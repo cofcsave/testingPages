@@ -1,0 +1,589 @@
+@import 'variables';
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: $waterBlue;
+background: linear-gradient(90deg, $waterBlue 0%, #003F67 100%);
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: $lightColor;
+    font-weight: 300;
+    @media only screen and (max-width:767px) {
+        font-size: 1rem;
+    }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #000;
+  background: $accent;
+}
+
+::selection {
+  color: #000;
+  background: $accent;
+}
+
+h1  {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    @media only screen and (min-width:767px) {
+        margin:0;
+   }
+    span {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        font-weight: 100;
+        margin: 0 ;
+        text-transform: uppercase;
+        @media only screen and (max-width:767px) {
+             font-size: 1.2rem;
+        }
+        @media only screen and (max-width:667px) {
+             font-size: 1rem;
+        }
+    }
+     @media only screen and (max-width:767px) {
+         font-size: 4rem;
+         line-height: 4rem;
+    }
+    @media only screen and (max-width:667px) {
+         font-size: 3rem;
+         line-height: 3rem;
+    }
+    @media only screen and (max-width:467px) {
+        font-size: 2rem;
+        line-height: 2rem;
+   }
+}
+
+h2  {
+    margin: 0;
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+     @media only screen and (max-width:767px) {
+         font-size: 4rem;
+         line-height: 4rem;
+    }
+    @media only screen and (max-width:667px) {
+         font-size: 3rem;
+         line-height: 3rem;
+    }
+    @media only screen and (max-width:467px) {
+        font-size: 2rem;
+        line-height: 2rem;
+   }
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: $accent;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 24px;
+    @media only screen and (max-width:767px) {
+         font-size: 1.6rem;
+    }
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    margin: 0;
+    vertical-align: top;
+    @media only screen and (max-width:767px) {
+         font-size: 1.4rem;
+         line-height: normal;
+    }
+    @media only screen and (max-width:667px) {
+         font-size: 1.2rem;
+    }
+    &.preHeader {
+        text-transform: uppercase;
+        margin-bottom: -15px;
+    }
+}
+
+h5 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin: 0 ;
+    text-transform: uppercase;
+    @media only screen and (max-width:767px) {
+         font-size: 1.2rem;
+    }
+    @media only screen and (max-width:667px) {
+         font-size: 1rem;
+    }
+}
+h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 ;
+    @media only screen and (max-width:767px) {
+         font-size: 1rem;
+    }
+    @media only screen and (max-width:667px) {
+         font-size: .9rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    color: $lightColor;
+    line-height: 1.6rem;
+    margin: 0;
+    @media only screen and (max-width:767px) {
+         font-size: .9rem;
+        line-height: 1.3rem;
+    }
+}
+
+section:not(.notopPad):not(.aboveWater):not(.waterLine) {
+    padding-top: 120px;
+    @media only screen and (max-width:767px) {
+        padding-top: 75px;
+    }
+    @media only screen and (max-width:425px) {
+        padding-top: 45px;
+    }
+
+}
+
+section:not(.aboveWater) {
+    padding-bottom: 100px;
+    @media only screen and (max-width:767px) {
+        padding-bottom: 70px;
+    }
+    @media only screen and (max-width:425px) {
+        padding-bottom: 30px;
+    }
+}
+section.waterLine.lm-water {
+    @media only screen and (max-width:425px) {
+        padding-bottom: 100px;
+    }
+}
+
+section#instructions, section#schedule, section#travel{
+    background: $blueGradient;
+    .container {
+        z-index: 6;
+    }
+}
+section#rentals, section#classes{
+    background-color: $darkSection;
+}
+.container {
+    max-width: 85rem;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    padding: 0 100px;
+    @media only screen and (max-width:1240px) {
+        padding: 0 48px;
+    }
+    @media only screen and (max-width:767px) {
+        padding: 0 24px;
+    }
+    @media only screen and (max-width:467px) {
+        padding: 0 12px;
+    }
+}
+
+
+.web-contain {
+    max-width: 4000px;
+    margin: auto;
+    overflow:hidden;
+    &:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: url(/hero-long.jpg) no-repeat center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 3500px;
+        @media only screen and (max-width:567px) {
+            background-size: 1800px;
+            min-height: 389px;
+            top: 34px;
+        }
+    }
+    @media only screen and (min-width:2200px) {
+        border-left: 2px solid red;
+    }
+}
+
+section.aboveWater {
+    // background-image: url("images/hero-long.jpg");
+    /* Set a specific height */
+    min-height: 642px; 
+    /* Create the parallax scrolling effect */
+    // background-attachment: fixed;
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    // background-size: 3450px;
+    @media only screen and (max-width:567px) {
+        background-size: 1800px;
+        min-height: 389px;
+        background-position: center 30px;
+    }
+}
+
+section.waterLine {
+    position: relative;
+    z-index: 4;
+    img {
+        position: absolute;
+        left: 50%;
+        transform:translateX(-50%);
+        top: -725px;
+        width: 4000px;
+        @media only screen and (max-width:567px) {
+            top: -699px;
+        }
+    }
+}
+.headlineDescription {
+    margin-bottom: 48px;
+}
+.btnOrange {
+    background-color: $accent;
+    color:$darkestBlue;
+    padding: 12px 24px;
+    border-radius: $borderRadius;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 24px;
+    .arrow {
+        border: solid $darkestBlue;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        margin-bottom: 1px;
+        margin-left: 4px;
+        transition: all .5s;
+    }
+    &:hover {
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+        color:$darkestBlue;
+        .arrow {
+            transform:rotate(-45deg) translate(2px, 2px);
+            transition: all .5s;
+        }
+    }
+}
+
+.head-line {
+    width: 200px;
+    height: 6px;
+    background-color: $accent;
+    margin-bottom: 3rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    &.centerHL {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media only screen and (max-width:676px) {
+        margin-bottom: 15px;
+    }
+}
+
+.subHeader {
+    margin-top: -20px;
+    @media only screen and (max-width:689px) {
+        margin-top: 0;
+    }
+}
+
+.centerText {
+    text-align: center;
+}
+
+.small-print {
+	font-size: 14px;
+}
+
+#bot-logo {
+	width: 100%;
+	min-width: 120px;
+	max-width: 220px;
+	margin: 20px auto;
+}
+
+
+
+
+// Learn More page Style
+.lm-page {
+    h1 {
+        font-size: 5rem;
+         @media only screen and (max-width:767px) {
+             font-size: 3.3rem;
+        }
+        @media only screen and (max-width:667px) {
+             font-size: 2.3rem;
+        }
+        @media only screen and (max-width:367px) {
+            font-size: 1.3rem;
+       }
+    }
+}
+section.lm-water {
+    img {top:-483px;}
+}
+section#lm-top {
+    position: relative;
+    z-index: 5;
+    margin-top: 100px;
+    .inst-top {
+        h1 {
+            text-align: center;
+        }
+    }
+    ul {
+        list-style: circle;
+        padding-left:30px;
+    }
+    .fullHeadline {
+        margin-bottom: 120px;
+        @media only screen and (max-width:867px) {
+            margin-bottom: 30px;
+        }
+    }
+        .halfLT {
+            display: inline-block;
+            width: 46%;
+            box-sizing: border-box;
+            margin-bottom: 45px;
+            vertical-align: top;
+            position: relative;
+            @media only screen and (max-width:950px) {
+                margin-bottom: 5px;
+            }
+            @media only screen and (max-width:867px) {
+                width:100%;
+                display: block;
+                margin-bottom: 50px;
+            }
+        }
+        .halfRT {
+            display: inline-block;
+            width: 50%;
+            box-sizing: border-box;
+            text-align: right;
+            position: relative;
+            z-index: -1;
+            vertical-align: top;
+            .threeFish {
+                position: absolute;
+                top: -3rem;
+                left: -7rem;
+                width: 90%;
+                 @media only screen and (max-width:767px) {
+                   bottom: -25px;
+                    right: 0;
+                    width: 100%;
+                }
+            }
+            img {
+                width: 70%;
+            }
+            .imgCrop {
+                width: 82%;
+                vertical-align: bottom;
+                margin-right: 0;
+                margin-left: auto;
+                overflow: hidden;
+                box-shadow: $imgShadow;
+                max-height: 335px;
+                img {
+                    width: 128%;
+                    display: block;
+                    margin-left: -27px;
+                    margin-top: -45%;
+                }
+                @media only screen and (max-width:867px) {
+                    width: 100%;
+                    margin: auto;
+                    max-height: 400px;
+                }
+                @media only screen and (max-width:567px) {
+
+                    max-height: 250px;
+                }
+            }
+            .circles {
+                position: absolute;
+                top: -3.5vw;
+                right: 16%;
+                opacity: 0.4;
+                width: 28vw;
+                height: 28vw;
+                z-index: -2;
+                max-height: 600px;
+                max-width: 600px;
+                @media only screen and (max-width:800px) {
+                    right: 23%;
+                }
+                .lgCircle {
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid $lightColor;
+                    border-radius: 1000px;
+                    position: relative;
+                    .smCircle {
+                        height: 85%;
+                        width: 85%;
+                        border: 2px solid $lightColor;
+                        border-radius: 1000px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform:translate(-50%, -50%);
+                    }
+                }
+            }
+            @media only screen and (max-width:867px) {
+                width:100%;
+                display: block;
+                text-align: center;
+                margin-top: 13vw;
+                margin-bottom: 8vw;
+                .circles {
+                    left: auto;
+                    top: -5vw;
+                    width: 44vw;
+                    height: 44vw;
+                    right: -6%;
+                }
+            }
+        }
+        .halfLB {
+            display: inline-block;
+            width: 48%;
+            box-sizing: border-box;
+            margin-bottom: 45px;
+            vertical-align: top;
+            position: relative;
+            .imgCrop {
+                height: 250px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                box-shadow: $imgShadow;
+                img {
+                    vertical-align: bottom;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 170%;
+                    max-width: 700px;
+                    top: 59%;
+                     @media only screen and (max-width:767px) {
+                        max-width: 850px;
+                    }
+                }
+            }
+            .threeFish {
+                position: absolute;
+                top: -3rem;
+                width: 95%;
+                z-index: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width:767px) {
+               width:100%;
+               display: block;
+               margin-top: 50px;
+            }
+        }
+        .inst-btm {
+            margin-top:120px;
+            position: relative;
+        .halfRB {
+            display: inline-block;
+            width: 57%;
+            box-sizing: border-box;
+            padding-left: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &.vBtm {
+                vertical-align: bottom;
+            }
+            .threeFish {
+                position: absolute;
+                bottom: -3rem;
+                right: -3rem;
+                width: 90%;
+            }
+            img {
+                width: 60%;
+                vertical-align: bottom;
+            }
+
+        @media only screen and (max-width:767px) {
+            width:100%;
+            display: block;
+            padding-left: 0px;
+            position: relative;
+            transform:none;
+            top:auto;
+            text-align: center;
+            .head-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+.facts {
+    .singleFacts {
+        width: 33%;
+        display: inline-block;
+        box-sizing:border-box;
+        padding: 20px;
+        vertical-align: top;
+        p {
+            margin-top: 20px;
+            @media only screen and (max-width:767px) {
+                margin-top:10px;
+            }
+        }
+        @media only screen and (max-width:1430px) {
+            width:50%;
+        }
+        @media only screen and (max-width:767px) {
+            width:100%;
+        }
+    }
+}
+}
+

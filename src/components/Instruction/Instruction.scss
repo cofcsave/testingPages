@@ -1,0 +1,348 @@
+@import '../../variables';
+
+section#instructions {
+    position: relative;
+    @media only screen and (max-width:767px) {
+        padding-top:48px;
+    }
+    .container {
+        &:before {
+            content: "INSTRUCTION";
+            top: -60px;
+            left: 96px;
+            z-index: -1;
+            position: absolute;
+            color: $waterBlue;
+            font-family: 'Anton', sans-serif;
+            font-size: 15rem;
+            line-height: 1;
+            opacity: .2;
+            text-shadow:
+            -1px -1px 0 $lightColor,  
+            1px -1px 0 $lightColor,
+            -1px 1px 0 $lightColor,
+            1px 1px 0 $lightColor;
+            @media only screen and (max-width:1240px) {
+                left: 46px;
+                font-size: 11rem;
+                top: -30px;
+            }
+            @media only screen and (max-width:767px) {
+                font-size: 7rem;
+                top:12px;
+            }
+            @media only screen and (max-width:467px) {
+                font-size: 4rem;
+                top:0;
+                left: 25px;
+            }
+        }
+        @supports((text-stroke: 1px $lightColor) or (-webkit-text-stroke: 1px $lightColor)) {
+            &:before {
+                color: transparent;
+                -webkit-text-stroke: 1px $lightColor;
+                text-stroke: 1px $lightColor;
+                text-shadow: none;
+                }
+            }
+        }
+        .inst-top {
+            display: flex;
+            align-items: flex-end;
+            @media only screen and (max-width:767px) {
+                flex-wrap: wrap;
+            }
+            .halfLT {
+                width: 46%;
+                margin-bottom: 45px;
+                position: relative;
+                margin-top: -50px;
+                @media only screen and (max-width:950px) {
+                    margin-bottom: 5px;
+                }
+                @media only screen and (max-width:767px) {
+                    width:100%;
+                    margin-bottom: 50px;
+                }
+            }
+            .halfRT {
+                width: 50%;
+                box-sizing: border-box;
+                text-align: right;
+                position: relative;
+                z-index: -1;
+                vertical-align: bottom;
+                .threeFish {
+                    position: absolute;
+                    top:24vw;
+                    right: -3rem;
+                    width: 90%;
+                     @media only screen and (max-width:767px) {
+                       bottom: -25px;
+                        right: 0;
+                        width: 100%;
+                    }
+                }
+                img {
+                    width: 70%;
+                }
+                .imgCrop {
+                    width: 85%;
+                    vertical-align: bottom;
+                    margin-right: 0;
+                    margin-left: auto;
+                    @include imgCrop;
+                    transform: $rotateLeft;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                    @media only screen and (max-width:900px) {
+                        width: 80%;
+                    }
+                    @media only screen and (max-width:800px) {
+                        width: 95%;
+                        margin: auto;
+                        max-height: 300px;
+                    }
+                }
+                .circles {
+                    position: absolute;
+                    top: -4vw;
+                    right: 25%;
+                    opacity: 0.4;
+                    width: 32vw;
+                    height: 32vw;
+                    z-index: -2;
+                    max-height: 600px;
+                    max-width: 600px;
+                    @media only screen and (max-width:800px) {
+                        right: 23%;
+                    }
+                    .lgCircle {
+                        height: 100%;
+                        width: 100%;
+                        border: 2px solid $lightColor;
+                        border-radius: 1000px;
+                        position: relative;
+                        .smCircle {
+                            height: 85%;
+                            width: 85%;
+                            border: 2px solid $lightColor;
+                            border-radius: 1000px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform:translate(-50%, -50%);
+                        }
+                    }
+                }
+                @media only screen and (max-width:767px) {
+                    width:100%;
+                    display: block;
+                    text-align: center;
+                    .circles {
+                        left: auto;
+                        top: -6vw;
+                        width: 60vw;
+                        height: 60vw;
+                        right: -6%;
+                    }
+                }
+            }
+        }
+       
+    .inst-btm {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row-reverse;
+        .halfLB {
+            width: 30%;
+            margin-bottom: 45px;
+            position: relative;
+            .imgCrop {
+                height: 300px;
+                width: 100%;
+                @include imgCrop;
+                transform: $rotateRight;
+                img {
+                    vertical-align: bottom;
+                    position: absolute;
+                    left: 60%;
+                    transform: translate(-50%, -50%);
+                    width: 170%;
+                    max-width: 600px;
+                    top: 39%;
+                     @media only screen and (max-width:767px) {
+                        max-width: 850px;
+                    }
+                }
+            }
+            .threeFish {
+                position: absolute;
+                top: -2.2rem;
+                left: 50%;
+                transform:translateX(-50%);
+                width: 95%;
+                z-index: 1;
+                img {
+                    width: 100%;
+                }
+                @media only screen and (max-width:767px) {
+                    top: auto;
+                    bottom: -50px;
+                }
+            }
+            @media only screen and (max-width:767px) {
+//                width:100%;
+//                display: block;
+//                margin-top: 50px;
+                display: none;
+            }
+        }
+        .halfRB {
+                width: 70%;
+                padding-left: 60px;
+                &.vBtm {
+                    vertical-align: bottom;
+                }
+                .threeFish {
+                    position: absolute;
+                    bottom: -3rem;
+                    right: -3rem;
+                    width: 90%;
+                }
+                img {
+                    width: 60%;
+                    vertical-align: bottom;
+                }
+                .sectionInfo {
+                    width: 100%;
+                    h4 {
+                        width: 40%;
+                        display: inline-block;
+                        @media only screen and (max-width:1150px) {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    .multiDivid {
+                        width: 10%;
+                        display: inline-block;
+                        height: 125px;
+                        vertical-align: top;
+                        margin-top: 30px;
+                        text-align: center;
+                        .topR, .bottomL {
+                            width:20%;
+                            height: 100%;
+                            display: inline-block;
+                        }
+                        .centerLine {
+                            width: 1px;
+                            background-color: $lightColor;
+                            height:100%;
+                            display: inline-block;
+                        }
+                        .topR {
+                            border-bottom:1px solid $lightColor;
+                        }
+                        .bottomL {
+                            border-top:1px solid $lightColor;
+                            margin-bottom: -1px;
+                        }
+                        @media only screen and (max-width:1150px) {
+                            width: 100%;
+                            display: block;
+                            height: 30px;
+                            margin: 30px auto;
+                            .topR, .bottomL {
+                                width:90%;
+                                height: 15px;
+                                display: block;
+                            }
+                            .centerLine {
+                                width: 90%;
+                                height:1px;
+                                display: block;
+                            }
+                            .topR {
+                                border-right:1px solid $lightColor;
+                                border-bottom: 0;
+                            }
+                            .bottomL {
+                                border-top:0;
+                                border-left:1px solid $lightColor;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    .smChunk {
+                        width: 40%;
+                        display: inline-block;
+                         @media only screen and (max-width:1150px) {
+                             width: 100%;
+                             display: block;
+                        }
+                    }
+                }
+            .learnMore {
+                margin-top: 30px;
+            }
+            @media only screen and (max-width:767px) {
+                width:100%;
+                display: block;
+                padding-left: 0px;
+                float: none;
+            }
+        }
+        @media only screen and (max-width:767px) {
+            margin-top: 5rem;
+        }
+    }
+    .facts {
+        margin-top:84px;
+        .factsContainer {
+            display:flex;
+            gap:48px;
+            @media only screen and (max-width:767px) {
+                gap:24px;
+                flex-wrap: wrap;
+            }
+            @media only screen and (max-width:567px) {
+                padding-top: 24px;
+            }
+            .fact {
+                width: calc(25% - 36px);
+                .icon {
+                    width: 68px;
+                    margin-bottom: 24px;
+                    svg {
+                        width: 100%;
+                        display:block;
+                        height: auto;
+                        border: 3px solid #FF9400;
+                        border-radius: 50px;
+                        padding: 10px;
+                        overflow: visible;
+                        box-sizing: border-box;
+                        @media only screen and (max-width:767px) {
+                            padding:4px;
+                            border: 2px solid #FF9400;
+                        }
+                    }
+                    
+                    @media only screen and (max-width:767px) {
+                        width:60px;    
+                    }
+                }
+                @media only screen and (max-width:767px) {
+                    width: calc(50% - 12px);
+                }
+                h6 {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

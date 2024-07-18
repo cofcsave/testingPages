@@ -1,0 +1,393 @@
+section#instructions {
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions {
+    padding-top: 48px;
+  }
+}
+section#instructions .container:before {
+  content: "INSTRUCTION";
+  top: -60px;
+  left: 96px;
+  z-index: -1;
+  position: absolute;
+  color: #027fbb;
+  font-family: "Anton", sans-serif;
+  font-size: 15rem;
+  line-height: 1;
+  opacity: 0.2;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+@media only screen and (max-width: 1240px) {
+  section#instructions .container:before {
+    left: 46px;
+    font-size: 11rem;
+    top: -30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .container:before {
+    font-size: 7rem;
+    top: 12px;
+  }
+}
+@media only screen and (max-width: 467px) {
+  section#instructions .container:before {
+    font-size: 4rem;
+    top: 0;
+    left: 25px;
+  }
+}
+@supports (text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff) {
+  section#instructions .container:before {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+}
+section#instructions .inst-top {
+  display: flex;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-top {
+    flex-wrap: wrap;
+  }
+}
+section#instructions .inst-top .halfLT {
+  width: 46%;
+  margin-bottom: 45px;
+  position: relative;
+  margin-top: -50px;
+}
+@media only screen and (max-width: 950px) {
+  section#instructions .inst-top .halfLT {
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-top .halfLT {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+section#instructions .inst-top .halfRT {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: right;
+  position: relative;
+  z-index: -1;
+  vertical-align: bottom;
+}
+section#instructions .inst-top .halfRT .threeFish {
+  position: absolute;
+  top: 24vw;
+  right: -3rem;
+  width: 90%;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-top .halfRT .threeFish {
+    bottom: -25px;
+    right: 0;
+    width: 100%;
+  }
+}
+section#instructions .inst-top .halfRT img {
+  width: 70%;
+}
+section#instructions .inst-top .halfRT .imgCrop {
+  width: 85%;
+  vertical-align: bottom;
+  margin-right: 0;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 9px 8px 20px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  transform: rotate(3deg);
+}
+section#instructions .inst-top .halfRT .imgCrop img {
+  width: 100%;
+  display: block;
+}
+@media only screen and (max-width: 900px) {
+  section#instructions .inst-top .halfRT .imgCrop {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  section#instructions .inst-top .halfRT .imgCrop {
+    width: 95%;
+    margin: auto;
+    max-height: 300px;
+  }
+}
+section#instructions .inst-top .halfRT .circles {
+  position: absolute;
+  top: -4vw;
+  right: 25%;
+  opacity: 0.4;
+  width: 32vw;
+  height: 32vw;
+  z-index: -2;
+  max-height: 600px;
+  max-width: 600px;
+}
+@media only screen and (max-width: 800px) {
+  section#instructions .inst-top .halfRT .circles {
+    right: 23%;
+  }
+}
+section#instructions .inst-top .halfRT .circles .lgCircle {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 1000px;
+  position: relative;
+}
+section#instructions .inst-top .halfRT .circles .lgCircle .smCircle {
+  height: 85%;
+  width: 85%;
+  border: 2px solid #ffffff;
+  border-radius: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-top .halfRT {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  section#instructions .inst-top .halfRT .circles {
+    left: auto;
+    top: -6vw;
+    width: 60vw;
+    height: 60vw;
+    right: -6%;
+  }
+}
+section#instructions .inst-btm {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+section#instructions .inst-btm .halfLB {
+  width: 30%;
+  margin-bottom: 45px;
+  position: relative;
+}
+section#instructions .inst-btm .halfLB .imgCrop {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 9px 8px 20px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  transform: rotate(-3deg);
+}
+section#instructions .inst-btm .halfLB .imgCrop img {
+  vertical-align: bottom;
+  position: absolute;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 170%;
+  max-width: 600px;
+  top: 39%;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-btm .halfLB .imgCrop img {
+    max-width: 850px;
+  }
+}
+section#instructions .inst-btm .halfLB .threeFish {
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  z-index: 1;
+}
+section#instructions .inst-btm .halfLB .threeFish img {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-btm .halfLB .threeFish {
+    top: auto;
+    bottom: -50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-btm .halfLB {
+    display: none;
+  }
+}
+section#instructions .inst-btm .halfRB {
+  width: 70%;
+  padding-left: 60px;
+}
+section#instructions .inst-btm .halfRB.vBtm {
+  vertical-align: bottom;
+}
+section#instructions .inst-btm .halfRB .threeFish {
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  width: 90%;
+}
+section#instructions .inst-btm .halfRB img {
+  width: 60%;
+  vertical-align: bottom;
+}
+section#instructions .inst-btm .halfRB .sectionInfo {
+  width: 100%;
+}
+section#instructions .inst-btm .halfRB .sectionInfo h4 {
+  width: 40%;
+  display: inline-block;
+}
+@media only screen and (max-width: 1150px) {
+  section#instructions .inst-btm .halfRB .sectionInfo h4 {
+    width: 100%;
+    display: block;
+  }
+}
+section#instructions .inst-btm .halfRB .sectionInfo .multiDivid {
+  width: 10%;
+  display: inline-block;
+  height: 125px;
+  vertical-align: top;
+  margin-top: 30px;
+  text-align: center;
+}
+section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .topR, section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .bottomL {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .centerLine {
+  width: 1px;
+  background-color: #ffffff;
+  height: 100%;
+  display: inline-block;
+}
+section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .topR {
+  border-bottom: 1px solid #ffffff;
+}
+section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .bottomL {
+  border-top: 1px solid #ffffff;
+  margin-bottom: -1px;
+}
+@media only screen and (max-width: 1150px) {
+  section#instructions .inst-btm .halfRB .sectionInfo .multiDivid {
+    width: 100%;
+    display: block;
+    height: 30px;
+    margin: 30px auto;
+  }
+  section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .topR, section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .bottomL {
+    width: 90%;
+    height: 15px;
+    display: block;
+  }
+  section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .centerLine {
+    width: 90%;
+    height: 1px;
+    display: block;
+  }
+  section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .topR {
+    border-right: 1px solid #ffffff;
+    border-bottom: 0;
+  }
+  section#instructions .inst-btm .halfRB .sectionInfo .multiDivid .bottomL {
+    border-top: 0;
+    border-left: 1px solid #ffffff;
+    margin-bottom: 0;
+  }
+}
+section#instructions .inst-btm .halfRB .sectionInfo .smChunk {
+  width: 40%;
+  display: inline-block;
+}
+@media only screen and (max-width: 1150px) {
+  section#instructions .inst-btm .halfRB .sectionInfo .smChunk {
+    width: 100%;
+    display: block;
+  }
+}
+section#instructions .inst-btm .halfRB .learnMore {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-btm .halfRB {
+    width: 100%;
+    display: block;
+    padding-left: 0px;
+    float: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .inst-btm {
+    margin-top: 5rem;
+  }
+}
+section#instructions .facts {
+  margin-top: 84px;
+}
+section#instructions .facts .factsContainer {
+  display: flex;
+  gap: 48px;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .facts .factsContainer {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 567px) {
+  section#instructions .facts .factsContainer {
+    padding-top: 24px;
+  }
+}
+section#instructions .facts .factsContainer .fact {
+  width: calc(25% - 36px);
+}
+section#instructions .facts .factsContainer .fact .icon {
+  width: 68px;
+  margin-bottom: 24px;
+}
+section#instructions .facts .factsContainer .fact .icon svg {
+  width: 100%;
+  display: block;
+  height: auto;
+  border: 3px solid #FF9400;
+  border-radius: 50px;
+  padding: 10px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .facts .factsContainer .fact .icon svg {
+    padding: 4px;
+    border: 2px solid #FF9400;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .facts .factsContainer .fact .icon {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section#instructions .facts .factsContainer .fact {
+    width: calc(50% - 12px);
+  }
+}
+section#instructions .facts .factsContainer .fact h6 {
+  margin-bottom: 12px;
+}
+
+/*# sourceMappingURL=Instruction.css.map */
